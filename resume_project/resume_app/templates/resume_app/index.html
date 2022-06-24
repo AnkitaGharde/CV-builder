@@ -1,0 +1,213 @@
+<!DOCTYPE html>{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CV Builder</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+
+.middle-div {
+    width: 100%;
+    height: 600px;
+    margin: 100px auto;
+}
+
+
+
+
+.hover01 figure img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover01 figure:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
+
+body{
+
+  background-color: #eee;
+}
+
+.navbar-nav>li>a{
+
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-right:20px;
+  color: #fff;
+}
+
+
+.navbar-toggler {
+    padding: .20rem .50rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid white;
+
+    }
+
+    .nav-link{
+
+      color: #fff !important;
+    }
+
+
+.wrapper{
+      width: 100%;
+    position: absolute;
+    height: 100%;
+    background-color: #0d1bba;
+    clip-path: polygon(81% 0, 100% 0, 100% 50%, 100% 100%, 71% 100%);
+    transition: 1s all;
+}
+
+.navbar-brand{
+
+  color:#fff;
+  font-family: 'Allerta Stencil', sans-serif;
+  margin-bottom: 4px;
+  font-size: 27px;
+}
+
+.navbar-red:hover .wrapper{
+
+  clip-path: polygon(81% 0, 100% 0, 100% 50%, 100% 100%, 65% 100%);
+
+}
+
+.navbar-brand:hover{
+
+  color:#fff;
+
+}
+
+.navbar-red{
+
+ background-color: #ffffff;
+  color: #fff;
+
+}
+
+.all-show{
+
+  z-index: 10;
+}
+
+</style>
+</head>
+<body>
+
+
+
+<nav class="navbar navbar-expand-lg navbar-red navbar-dark">
+        <div class="wrapper">
+
+        </div>
+  <div class="container-fluid all-show">
+     <a class="navbar-brand" href="{% url 'index' %}">
+             <img src="{% static 'resume_app/images/logo3.jpg'%}"height="60px" width="100px">
+         </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+
+               <li class="nav-item"style="padding-left:600px;">
+
+
+            <a href="{% url 'login' %}"><button type="button" class="btn btn-warning">Login</button></a>
+        </li>
+
+           <li class="nav-item px-3">
+           <a href="{% url 'logout' %}"><button type="button" class="btn btn-warning">Logout</button></a>
+
+
+
+        </li>
+
+      </ul>
+
+
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="p-3 mb-2 bg-light text-dark">
+<div class="row">
+    <div class="col-sm-6 text-center mt-5">
+        <h1 style="color:blue;"><b>Design winning <b style="color:pink;">CV</b> with <b style="color:purple">Quick Resume</b></b></h1>
+
+         <a href="{% url 'make_cv' %}"> <button type="button" class="btn btn-dark"><b style="color:white;"><h4>Build my resume</h4></b></button></a>
+    </div>
+
+
+     <div class="col-sm-6">
+     <img src="{% static 'resume_app/images/cv.jpg'%}" height="300px" width="100%" alt="My image">
+    </div>
+</div>
+</div>
+
+
+<div class="container">
+<div class="row">
+    <div class="col-sm-4 hover01 column">
+    <div class="middle-div">
+    <div>
+    <figure><img src="{% static 'resume_app/images/cv1.jpg'%}" /></figure>
+    </div>
+   </div>
+    </div>
+
+
+      <div class="col-sm-4 hover01 column">
+    <div class="middle-div">
+    <div>
+    <figure><img src="{% static 'resume_app/images/cv2.png'%}" height="100px" width="300px" /></figure>
+    </div>
+   </div>
+    </div>
+
+      <div class="col-sm-4 hover01 column">
+    <div class="middle-div">
+    <div>
+    <figure><img src="{% static 'resume_app/images/cv3.jpg'%}" /></figure>
+    </div>
+   </div>
+    </div>
+
+    </div>
+</div>
+
+
+
+
+<footer class="bg-light text-center text-lg-start">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2022 Copyright:
+    <a class="text-dark" href="https://mdbootstrap.com/">Techquadra.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

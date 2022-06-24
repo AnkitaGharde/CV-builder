@@ -1,0 +1,167 @@
+
+
+<!DOCTYPE html>{% load static %}
+<html>
+<head>
+	<title>HTML Tp PDF</title>
+	<!-- Latest compiled and minified bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<style>
+		body{
+			background-color: #764ba2;
+		}
+
+		.card{
+			background-color: #fff;
+			padding: 50px 50px 50px 50px;
+			margin:50px;
+		}
+
+
+
+
+		@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
+
+body{
+
+  background-color: #eee;
+}
+
+.navbar-nav>li>a{
+
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-right:20px;
+  color: #fff;
+}
+
+
+.navbar-toggler {
+    padding: .20rem .50rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid white;
+
+    }
+
+    .nav-link{
+
+      color: #fff !important;
+    }
+
+
+.wrapper{
+      width: 100%;
+    position: absolute;
+    height: 100%;
+    background-color: #0d1bba;
+    clip-path: polygon(81% 0, 100% 0, 100% 50%, 100% 100%, 71% 100%);
+    transition: 1s all;
+}
+
+.navbar-brand{
+
+  color:#fff;
+  font-family: 'Allerta Stencil', sans-serif;
+  margin-bottom: 4px;
+  font-size: 27px;
+}
+
+.navbar-red:hover .wrapper{
+
+  clip-path: polygon(81% 0, 100% 0, 100% 50%, 100% 100%, 65% 100%);
+
+}
+
+.navbar-brand:hover{
+
+  color:#fff;
+
+}
+
+.navbar-red{
+
+ background-color: #ffffff;
+  color: #fff;
+
+}
+
+.all-show{
+
+  z-index: 10;
+}
+
+
+	</style>
+</head>
+<nav class="navbar navbar-expand-lg navbar-red navbar-dark">
+        <div class="wrapper">
+
+        </div>
+  <div class="container-fluid all-show">
+     <a class="navbar-brand" href="{% url 'index' %}">
+             <img src="{% static 'resume_app/images/logo3.jpg'%}"height="40px" width="100px">
+         </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+
+
+
+           <li class="nav-item px-3" style="padding-left:600px;">
+           <a href="{% url 'logout' %}"><button type="button" class="btn btn-warning">Logout</button></a>
+
+
+
+        </li>
+
+      </ul>
+
+
+
+    </div>
+  </div>
+</nav>
+<body>
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md"></div>
+
+			<div class="col-md">
+				<div class="card card-body">
+					 <div class="text-center">
+						 <h3> <b style="color:blue;">Congratulations !</b><br> </h3>
+						 <h4 style="color:orange;">Resume Created Successfully ..</h4>
+					<h3> Download directly to PDF</h3>
+					<a class="btn btn-info" href="{% url 'pdf_view' 21 %}" target="_blank">Download Resume</a>
+
+<!--				<a class="btn btn-info"  href="#">Download Resume</a>-->
+
+
+					 </div>
+				</div>
+			</div>
+
+			<div class="col-md"></div>
+		</div>
+	</div>
+
+<footer class="bg-light text-center text-lg-start">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2022 Copyright:
+    <a class="text-dark" href="https://mdbootstrap.com/">Techquadra.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+</body>
+</html>
+
+
+
