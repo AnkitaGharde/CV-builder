@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-l(0wkk&u2ge&+7-hzp0(99+2^7o7l%uvy3%&va9ucai^88l#jh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','quickresumemaker.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','myquickcvmaker.herokuapp.com']
 
 
 # Application definition
